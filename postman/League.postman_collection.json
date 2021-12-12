@@ -1,0 +1,820 @@
+{
+	"info": {
+		"_postman_id": "056739a9-4a94-42de-b0f1-651db5414d11",
+		"name": "League",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Emre",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "emre@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://league-api.test/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 4|zP4VDhoavIkU5Rc2LJYkTcoLQkBqcFBcL2NbTXzy",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://league-api.test/api/profile",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "emre@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://league-api.test/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer 6|d3yJ4nJ8cr8syBx1wwP9XmksQxiZutkcKJbeoSyE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://league-api.test/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Team",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://league-api.test/api/teams",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://league-api.test/api/teams/4",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"teams",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Arsenal",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://league-api.test/api/teams",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"teams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Arsenal",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://league-api.test/api/teams/4",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"teams",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://league-api.test/api/teams/5",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"teams",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Point Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://league-api.test/api/teams/2/points/1",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"teams",
+								"2",
+								"points",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Point Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://league-api.test/api/teams/2/points",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"teams",
+								"2",
+								"points"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Point Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "scored_goal",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "conceded_goal",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://league-api.test/api/teams/2/points/7",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"teams",
+								"2",
+								"points",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Point Destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://league-api.test/api/teams/2/points/5",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"teams",
+								"2",
+								"points",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Next Matche",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://league-api.test/api/teams/1/next-matche",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"teams",
+								"1",
+								"next-matche"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Match",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://league-api.test/api/matches",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"matches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://league-api.test/api/matches/2",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"matches",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "rank",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "home_team_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "away_team_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://league-api.test/api/matches",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"matches"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "rank",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "home_team_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "away_team_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://league-api.test/api/matches/2",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"matches",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Destroy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://league-api.test/api/matches/3",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"matches",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Play",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://league-api.test/api/matches/1/play",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"matches",
+								"1",
+								"play"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Point",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://league-api.test/api/points",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"points"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://league-api.test/api/points/1",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"points",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "team_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "played",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "won",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "drawn",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "lost",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "gf",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "ga",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "gd",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "total_point",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://league-api.test/api/points",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"points"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "team_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "played",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "won",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "drawn",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "lost",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "gf",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "ga",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "gd",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "total_point",
+									"value": "0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://league-api.test/api/points/6",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"points",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://league-api.test/api/points/6",
+							"protocol": "http",
+							"host": [
+								"league-api",
+								"test"
+							],
+							"path": [
+								"api",
+								"points",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "8|DLNje7Ogq54kKBF2gO9zlffu0BgQiJfrvifrNh8l",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
